@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ameyutturkar/mean_stack_blog/issues"
   },
-  "homepage": "https://github.com/ameyutturkar/mean_stack_blog#readme"
+  "homepage": "https://github.com/ameyutturkar/mean_stack_blog#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
