@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="BlogApp"> <!-- Ties it to the angular module that declares it as an angular application-->
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src=""app.js></script> <!-- reference for ng-app to the module of the same name-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="app.js"></script> <!-- reference for ng-app to the module of the same name-->
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<div class="container">
+<div class="container" ng-controller="BlogController"> <!-- ng-controller ties this to code on JS -->
     <h1>Blog</h1>
-    <input class="form-control" placeholder="title"/>
-    <textarea class="form-control" placeholder="body"></textarea>
-    <button class="btn btn-primary btn-block">Post</button>
+    <input ng-model="post.title" class="form-control" placeholder="title"/>
+    <textarea ng-model="post.body" class="form-control" placeholder="body"></textarea>
+    <button ng-click="createPost(post)" class="btn btn-primary btn-block">Post</button> <!-- ng-click calls the function on click-->
 </div>
 </body>
 </html>
