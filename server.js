@@ -20,4 +20,10 @@ function createPost(req, res) {
     res.json(post); //just echoing the request to make the req res cycle complete
 }
 
+app.post("/api/blogpost", createPost); //to listen to incoming requests, //map it to a local function to handle requests
+
+function createPost() {
+    console.log("hello from server createPost()");
+}
+
 app.listen(3000); //to listen to incoming requests, 3000 is a very common port for dev
